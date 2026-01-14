@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STDTIGER+</title>
+
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* 사이드 배경 (메인과 동일: 흰색) */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 0;
+}
+
+/* 이미지 래퍼 */
+.wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* 이미지 표시 방식 (메인, Page A와 동일) */
+.wrapper img {
+  height: 100vh;
+  width: auto;
+  transform: scaleX(1.15);  /* 가로 확대 */
+  display: block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="wrapper">
+  <img src="C.jpg">
+</div>
+
+</body>
+</html>

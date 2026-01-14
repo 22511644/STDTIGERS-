@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STDTIGER+</title>
+
+<style>
+/* 기본 */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* 배경 (화면 꽉 채우는 이미지 느낌) */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 0;
+}
+
+/* 실제 메인 이미지 */
+.wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* 이미지 자체 */
+.wrapper img {
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: contain;
+  display: block;
+
+  transform: scaleX(1.1); /* 👈 가로만 75% 확대 */
+}
+
+/* 클릭 영역 */
+.area {
+  position: absolute;
+  background:transparent;
+  cursor: pointer;
+}
+
+/* 클릭 영역 A (예시) */
+.area-a {
+  top: 32%;
+  left: 6%;
+  width: 18%;
+  height: 11%;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 화면을 채우는 배경 -->
+<div class="bg"></div>
+
+<!-- 실제 이미지 + 클릭 영역 -->
+<div class="wrapper">
+  <img src="STDTIGERS+.jpg">
+
+  <div class="area area-a" onclick="location.href='pageA.html'"></div>
+  <div class="area area-b" onclick="location.href='pageB.html'"></div>
+</div>
+
+</body>
+</html>

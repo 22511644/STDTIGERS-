@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STDTIGER+</title>
+
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* 사이드 배경 (메인과 동일: 흰색) */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 0;
+}
+
+/* 실제 이미지 + 클릭 영역 */
+.wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* 메인 이미지 표시 방식과 동일 */
+.wrapper img {
+  height: 100vh;
+  width: auto;
+  transform: scaleX(1.15);  /* 메인에서 쓰는 값과 동일 */
+  display: block;
+}
+
+/* 클릭 영역 */
+.area {
+  position: absolute;
+  background:transparent;
+  cursor: pointer;
+}
+
+/* Page A → 다음 페이지 버튼 */
+.area-next {
+  top: 32%;
+  left: 6%;
+  width: 18%;
+  height: 11%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="wrapper">
+  <img src="B.jpg">
+
+  <!-- 다음 페이지로 이동 -->
+  <div class="area area-next" onclick="location.href='pageC.html'"></div>
+</div>
+
+</body>
+</html>
